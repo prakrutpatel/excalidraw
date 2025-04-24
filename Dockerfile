@@ -4,6 +4,8 @@ WORKDIR /opt/node_app
 
 COPY . .
 
+ARG VITE_APP_BACKEND_V2_GET_URL
+ENV VITE_APP_BACKEND_V2_GET_URL=$VITE_APP_BACKEND_V2_GET_URL
 # do not ignore optional dependencies:
 # Error: Cannot find module @rollup/rollup-linux-x64-gnu
 RUN yarn --network-timeout 600000
